@@ -39,8 +39,6 @@
   </div>
 </div>
 
-<div class="divider"></div>
-
 <div class="stats stats-vertical lg:stats-horizontal shadow w-full">
   <div class="stat place-items-center">
     <div class="stat-title">Date: 'MMM yyyy'</div>
@@ -75,4 +73,17 @@
     <div class="stat-value">{{customDate() | date: 'EEEE d, MMMM'}}</div>
     <div class="stat-desc">{{customDate()}}</div>
   </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="flex flex-row gap-2">
+  <h1 class="text-2xl font-bold">
+    Current Locale:
+    <span class="badge badge-secondary">ES</span>
+  </h1>
+
+  <button class="btn btn-primary">Passer au français</button>
+  <button class="btn btn-primary">Switch to english</button>
+  <button class="btn btn-primary">Cambiar a español</button>
 </div>
