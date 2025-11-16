@@ -3,10 +3,13 @@ import { provideRouter } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 
 import { routes } from './app.routes';
+import { LocaleService } from './services/locale.service';
 
-import esPeLocal from '@angular/common/locales/es-PE';
+import esPeLocale from '@angular/common/locales/es-PE';
+import frLocale from '@angular/common/locales/fr';
 
-registerLocaleData(esPeLocal, 'es-PE');
+registerLocaleData(esPeLocale, 'es-PE');
+registerLocaleData(frLocale, 'fr');
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,7 +18,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     {
       provide: LOCALE_ID,
-      useValue: 'es-PE'
+      deps: [LocaleService],
+      useFactory: (localeService: LocaleService) => localeService.getCurrentLocale()
     }
   ]
 };
