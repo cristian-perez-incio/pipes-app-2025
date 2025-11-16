@@ -1,1 +1,30 @@
-<p>numbers-page works!</p>
+<section class="mx-5">
+  <h1 class="text-2xl font-bold">Pipes Numéricos</h1>
+  <h3 class="text-xl font-thin">Pipes incluidos en Angular</h3>
+</section>
+
+<div class="stats shadow w-full">
+  <div class="stat place-items-center">
+    <div class="stat-title">Number: '1.2-2'</div>
+    <div class="stat-value">{{totalSales() | number: '1.2-2'}}</div>
+    <div class="stat-desc">{{totalSales()}}</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Number: '1.1-2'</div>
+    <div class="stat-value">{{totalSales() + 4381 | number: '1.1-2'}}</div>
+    <div class="stat-desc">{{totalSales()}}</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Currency Pipe</div>
+    <div class="stat-value">{{totalSales() | currency: 'USD' : 'symbol-narrow' : '1.3-3'}}</div>
+    <div class="stat-desc">{{totalSales()}}</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Percent Pipe</div>
+    <div class="stat-value">{{percent() | percent: '1.2-2'}}</div>
+    <div class="stat-desc">{{percent()}}</div>
+  </div>
+</div>

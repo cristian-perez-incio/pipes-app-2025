@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-numbers-page',
-  imports: [],
+  imports: [DecimalPipe, PercentPipe, CurrencyPipe],
   templateUrl: './numbers-page.html'
 })
 export default class NumbersPage {
+
+  totalSales = signal(50_415_687.5629);
+
+  percent = signal(0.4876);
 
 }
